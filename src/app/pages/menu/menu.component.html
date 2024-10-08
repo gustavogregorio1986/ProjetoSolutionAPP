@@ -7,24 +7,25 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link" [routerLink]="['/sobre']">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cadastrar</a>
+            <a class="nav-link" [routerLink]="['/cadastro']">Cadastrar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Consultar</a>
+            <a class="nav-link" [routerLink]="['/consulta']">Consultar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Listar Ativos</a>
+            <a class="nav-link" [routerLink]="['/ativos']">Listar Ativos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Listar Inativos</a>
+            <a class="nav-link" [routerLink]="['/inativos']">Listar Inativos</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <router-outlet></router-outlet>
