@@ -7,11 +7,23 @@ import { Observable } from 'rxjs';
 })
 export class AeroportoService {
 
-  private apiUrl = 'https://localhost:7094/api/aeroportos'; 
+  private apiUrl = 'https://localhost:7094/Api/Aeroportos'; 
 
   constructor(private http: HttpClient) { }
 
+  cadastrarAeroporto(aeroporto: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/AdicionarAeroporto`, aeroporto);
+  }
+  
   getAeroportos(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/aeroportos`);
+    return this.http.get<any[]>(`${this.apiUrl}/ListarAeroportos`);
+  }
+
+  getAtivos(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/ListarAtivos`);
+  }
+
+  getInativos(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/ListarInativos`);
   }
 }
