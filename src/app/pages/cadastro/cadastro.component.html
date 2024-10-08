@@ -1,1 +1,26 @@
-<p>cadastro works!</p>
+<div class="container mt-5">
+    <h2 class="mb-4">Cadastro de Aeroporto</h2>
+    <form>
+      <div class="mb-3">
+        <label for="nomeAeroporto" class="form-label">Nome do Aeroporto</label>
+        <input type="text" class="form-control" id="nomeAeroporto" placeholder="Digite o nome do aeroporto">
+      </div>
+  
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade">
+      </div>
+
+  
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Selecione se estar ativo ou não</option>
+        <option value="0">Ativo</option>
+        <option value="1">Inativo</option>
+      </select>
+  
+      <button type="submit" class="btn btn-primary">Cadastrar Aeroporto</button>
+    </form>
+  </div>
+  <br/><br/>
+  <app-footer></app-footer>
+  
